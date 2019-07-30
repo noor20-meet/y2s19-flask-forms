@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Add a Student</title>
@@ -6,10 +6,16 @@
 </head>
 <body>
     <h1>Add a Student</h1>
-    <form method="post">\
+    <form method="POST" action = "/add">
+    	<input type = "text" name = "student_name" placeholder = "enter student name">
+    	<input type = "text" name = "student_year" placeholder = "enter student year">  
         <br>
         <input type="submit" value="Submit">
     </form>
+    <form method = "POST" action = "/delete/<student_id>">
+    	<input type = "submit" value = "delete">
+
+
     <p><a href="{{url_for('home')}}">Home</a></p>
 </body>
 </html>

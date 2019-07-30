@@ -15,7 +15,10 @@
 	    Class: {{student.year}}<br>
 	    Finished Lab: {{student.finished_lab}}
     </p>
+    <form method = "POST" action = "/delete/{{student.student_id}}">
+        <input type = "submit" value = "delete"> </form>
     {% endfor %}
+
 
     <a href="{{url_for('add_student_route')}}">Add Student</a>
 
